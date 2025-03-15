@@ -15,7 +15,15 @@ let inputString = "Hi";
 
 Expected Output:
 sumCodePoints: 177 // 'H' = 72, 'i' = 105, 72 + 105 = 177
+*/
+let inputString = "Wombat";
+let sumCodePoints = inputString.charCodeAt(0) + inputString.charCodeAt(1);
+console.log(sumCodePoints);
+/* Output:
+sumCodePoints: 198 // 'W' = 87, 'o' = 111, 87 + 111 = 198
+*/
 
+/*
 Exercise 2: Generate a String from Two Code Points
 Objective: Take two numeric Unicode code points,
 convert them to characters using String.fromCharCode,
@@ -31,7 +39,16 @@ let codePoint2 = 66;
 
 Expected Output:
 combinedString: "AB" // 65 = 'A', 66 = 'B', combined = "AB"
-
+*/
+let codePoint1 = 74;
+let codePoint2 = 83;
+let combinedString = String.fromCharCode(codePoint1) + String.fromCharCode(codePoint2);
+console.log(combinedString);
+/*
+Output:
+combinedString: "JS" // 74 = 'J', 83 = 'S', combined = "JS
+*/
+/*
 Exercise 3: Find the Character Difference
 Objective: Extract the Unicode code points of two given characters from a string
 and calculate the absolute difference between them.
@@ -47,9 +64,17 @@ let index2 = 2;
 
 Expected Output:
 codePointDifference: 16 // 'C' = 67, 't' = 116, |67 - 116| = 16
-
-
-
+*/
+let funWord = "Unicorns";
+let index1 = 2;
+let index2 = 5;
+let codePointDifference = Math.abs(funWord.charCodeAt(index1)) - funWord.charCodeAt(index2);
+console.log(codePointDifference);
+/*
+Output:
+codePointDifference: 9 // 'i' = 105. 'r' = 114, |105 = 114| = 9
+*/
+/*
 Practice Problem #2
 
 Objective
@@ -86,15 +111,18 @@ Assign the result to a variable named swappedString.
 //Starter Code
 // Task 1
 let inputString1 = "Code";
-let firstCodePoint; // Your code here
-let thirdCodePoint; // Your code here
+let firstCodePoint = inputString1.charCodeAt(0); // Your code here
+let thirdCodePoint = inputString1.charCodeAt(2); // Your code here
 
 // Task 2
-let wordFromCodePoints; // Your code here
+let codes = [72, 101, 108, 108];
+let wordFromCodePoints = String.fromCharCode(codes[0]) + String.fromCharCode(codes[1]) + String.fromCharCode(codes[2]) + String.fromCharCode(codes[3]); // Your code here
 
 // Task 3
 let inputString2 = "Launch";
-let swappedString; // Your code here
+let character0 = inputString2.charCodeAt(0);
+let character5 = inputString2.charCodeAt(5);
+let swappedString = String.fromCharCode(character5) + "aunc" + String.fromCharCode(character0); // Your code here
 
 // Log all results
 console.log({
